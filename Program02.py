@@ -7,14 +7,18 @@ def getapplePrice():
     return appleprice_Func
 
 def gettotalApples():
-    totalapples_Func = (money/applePrice)
+    totalapples_Func = int(money/applePrice)
     return totalapples_Func
 
 def getChange():
     change_Func = (money%applePrice)
-    return change_Func   
+    return change_Func
+
+def displayOutput (totalApplesF, changeF):
+    print(f"You can buy {totalApplesF} apples and your change is {changeF} pesos.")
 
 money = getMoney()
 applePrice = getapplePrice()
 totalApples = gettotalApples()
-change = getChange()    
+change = getChange()
+displayOutput (totalApples, change)    
